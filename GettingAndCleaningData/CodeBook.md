@@ -14,52 +14,52 @@ UNTIDY DATASET    |	TIDY DATASET
 ------------------|-------------------------------
 tBodyAcc-XYZ      |timeBodyAccel.Mean.XYZ
 			|timeBodyAccel.Mean.Stdev.XYZ
---------------------------------------------------
+                  |
 tGravityAcc-XYZ	|timeGravityAccel.Mean.XYZ
 			|timeGravityAccel.Stdev.X
---------------------------------------------------
+                  |
 tBodyAccJerk-XYZ	|timeBodyAccelJerk.Mean.XYZ
 			|timeBodyAccelJerk.Stdev.XYZ
---------------------------------------------------
+                  |
 tBodyGyro-XYZ	|timeBodyGyro.Mean.XYZ
 			|timeBodyGyro.Stdev.XYZ
---------------------------------------------------
+                  |
 tBodyGyroJerk-XYZ	|timeBodyGyroJerk.Mean.XYZ
 			|timeBodyGyroJerk.Stdev.XYZ
---------------------------------------------------
+                  |
 tBodyAccMag		|timeBodyAccelMag.Mean
 			|timeBodyAccelMag.Stdev
---------------------------------------------------
+                  |
 tGravityAccMag	|timeGravityAccelMag.Mean
 			|timeGravityAccelMag.Stdev
---------------------------------------------------
+                  |
 tBodyAccJerkMag	|timeBodyAccelJerkMag.Mean
 			|timeBodyAccelJerkMag.Stdev
---------------------------------------------------
+                  |
 tBodyGyroMag	|timeBodyGyroMag.Mean
 			|timeBodyGyroMag.Stdev
---------------------------------------------------
+                  |
 tBodyGyroJerkMag	|timeBodyGyroJerkMag.Mean
 			|timeBodyGyroJerkMag.Stdev	
---------------------------------------------------
+                  |
 fBodyAcc-XYZ	|frequBodyAccel.Mean.XYZ
 			|frequBodyAccel.Stdev.XYZ
---------------------------------------------------
+                  |
 fBodyAccJerk-XYZ	|frequBodyAccelJerk.Mean.Z
 			|frequBodyAccelJerk.Stdev.X
---------------------------------------------------
+                  |
 fBodyGyro-XYZ	|frequBodyGyro.Mean.XYZ
 			|frequBodyGyro.Stdev.XYZ
---------------------------------------------------
+                  |
 fBodyAccMag		|frequBodyAccelMag.Mean
 			|frequBodyAccelMag.Stdev
---------------------------------------------------
+                  |
 fBodyAccJerkMag	|frequBodyBodyAccelJerkMag.Mean
 			|frequBodyBodyAccelJerkMag.Stdev
---------------------------------------------------
+                  |
 fBodyGyroMag	|frequBodyBodyGyroMag.Mean
 			|frequBodyBodyGyroMag.Stdev
---------------------------------------------------
+                  |
 fBodyGyroJerkMag	|frequBodyBodyGyroJerkMag.Mean
 			|frequBodyBodyGyroJerkMag.Stdev
 
