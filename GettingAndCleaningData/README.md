@@ -30,13 +30,11 @@ testData <- cbind(testLables, testingSubject, testDataset)
 features <- read.table("features.txt")
 features <- as.vector(features$V2)
 ```
-
 ### 6. Merge test- and training data and add column-names
 ```{r}
 mergedData <- rbind(testData,trainingData)
 colnames(mergedData) <- c("Activity", "Subject", features)
 ```
-
 ### 7. Pick out the columns with headers containing 'mean()' or 'std()', forming a new dataframe.
 ```{r}
 meanStd<-mergedData[,c(1,2, grep("mean\\(\\)|std\\(\\)", names(mergedData)))]
@@ -58,21 +56,26 @@ names(meanStdAct) <- make.names(names(meanStdAct))
 names(meanStdAct) <- sub("mean","Mean", names(meanStdAct),)
 names(meanStdAct) <- sub("std","Stdev", names(meanStdAct),)
 ```
-
 ### 10. The data frame is melted maintaining 'Activity' and 'Subject' as IDs.
+```{r}
 library("reshape")
 tidyDataset2 <- melt(meanStdAct, id=c("Activity","Subject"), measure.vars=names(meanStdAct)[3:68])
-
+```
 ### 11. Identifiers consisting of the activity and the subject were created which will serve as unique identifiers in the final dataset.
+```{r}
 activity.subject <- data.frame(paste(tolower(tidyDataset2$Activity),tidyDataset2$Subject, sep=""))
 names(activity.subject) <- "activity.subject"
-
+```
 ### 12. A new dataset is created by binding the new identifiers and the value columns
+```{r}
 tidyDataset2 <- cbind(activity.subject,tidyDataset2[3:4])
-
+```
 ### 13. The new dataset is casted, calculating the mean of each feature for each new unique identifier.
+```{r}
 library("reshape2")
 tidyDataset2 <- dcast(tidyDataset2, activity.subject ~ variable,mean)
-
+```
 ### 14. Creation of a txt.file.
+```{r}
 write.table(tidyDataset2,"tidyDataset2.txt", sep = "\t", row.names = FALSE)
+```
